@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+.index__body, .success__body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,4 +126,52 @@ svg {
   .newsletter__container--image-container-image {
     height: 100%;
   }
+}
+
+.success__body {
+  background-color: hsl(235, 18%, 26%);
+}
+
+.success__box {
+  width: 65%;
+  max-width: 400px;
+  padding: 2.5em 2em;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  color: hsl(235, 18%, 26%);
+}
+.success__box--image {
+  width: 15%;
+}
+.success__box--message {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.success__box--message-heading {
+  font-size: 2.5rem;
+  line-height: 1em;
+}
+.success__box--message-text {
+  font-size: 1rem;
+}
+.success__box--message-dismiss {
+  padding: 1em 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 300ms ease-in-out;
+}
+.success__box--message-dismiss:hover {
+  background: linear-gradient(to right, hsl(346, 71%, 58%), hsl(6, 100%, 66%));
+  box-shadow: 3px 4px 15px hsl(346, 71%, 78%), 4px 3px 15px hsl(6, 100%, 76%);
 }/*# sourceMappingURL=styles.css.map */

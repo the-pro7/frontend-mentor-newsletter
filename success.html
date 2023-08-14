@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
     <title>Success | Newsletter</title>
-</head>
-<body>
+  </head>
+  <body class="success__body">
     <!-- Success message start -->
+    <div class="success__box">
+      <img
+        src="./images/icon-success.svg"
+        alt="Success icon"
+        class="success__box--image"
+      />
+      <div class="success__box--message">
+        <h1 class="success__box--message-heading">Thanks for subscribing!</h1>
+        <p class="success__box--message-text">
+          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button class="success__box--message-dismiss">Dismiss message</button>
+      </div>
+    </div>
 
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-</body>
+    <!-- Success message end -->
+  </body>
 </html>
