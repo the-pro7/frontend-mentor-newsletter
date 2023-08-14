@@ -1,0 +1,25 @@
+$ff-primary: "Roboto", sans-serif;
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+// Colors
+$primary-color: hsl(4, 100%, 67%);
+$start: hsl(346, 71%, 58%);
+$stop: hsl(6, 100%, 66%);
+// Neutral colors
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+$desktop-bp: 680px;
+
+// media query
+@mixin media($desktop-bp) {
+    @media screen and (min-width: $desktop-bp) {
+        @content;
+    }
+}
