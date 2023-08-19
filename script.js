@@ -1,18 +1,25 @@
-const imageElementContainer = document.querySelector(
-  ".newsletter__container--image-container"
-);
-const imageElement = imageElementContainer.querySelector(
-  ".newsletter__container--image-container-image"
-);
+"use strict";
 
-const windowWidth = window.innerWidth;
-const desktopBreakpoint = 680;
-window.addEventListener("resize", (e) => {
-  const windowWidth = window.innerWidth;
+// Email validation
+const inputForm = document.querySelector(".newsletter__container--first-form");
+// const inputElement = inputForm.querySelector("input[type]");
 
-  if (windowWidth >= desktopBreakpoint) {
-    imageElement.src = "./images/illustration-sign-up-desktop.svg";
+// export const valid = false;
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  let userEmail = e.target.value;
+
+  console.log("hello")
+  if (validator.isEmail(userEmail)) {
+    console.log("valid")
   } else {
-    imageElement.src = "./images/illustration-sign-up-mobile.svg"
+    console.log("Invalid");
   }
-});
+  console.log(userEmail)
+
+
+};
+
+inputForm.addEventListener("input", handleSubmit);

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 // External styles
 @import "./config";
+// @import "./success.scss";
+
 
 * {
   margin: 0;
@@ -8,12 +10,16 @@
   box-sizing: border-box;
 }
 
-.index__body {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: $ff-primary;
+}
+
+input[type] {
+  padding-inline: 1em !important;
 }
 
 svg {
@@ -71,12 +77,11 @@ svg {
       gap: 0.5em;
 
       &-input {
-        // border: 3px solid red;
         display: grid;
         gap: 1em;
 
         & > * {
-          padding: 1.5em 0;
+          padding: 1.5em unset;
           font-family: $ff-primary;
           border-radius: 0.5rem;
         }
@@ -84,7 +89,6 @@ svg {
         [type="email"] {
           border: 1px solid $grey;
           transition: border 300ms ease;
-
           &:hover {
             border: 2px solid $charcoal-grey;
           }
@@ -101,8 +105,8 @@ svg {
 
           &:hover {
             background: linear-gradient(to right, $start, $stop);
-            box-shadow: 3px 4px 15px hsl(346, 71%, 78%),
-              4px 3px 15px hsl(6, 100%, 76%);
+            box-shadow: 3px 4px 15px hsl(346, 71%, 88%),
+              4px 3px 15px hsl(6, 100%, 86%);
           }
         }
       }
@@ -123,7 +127,7 @@ svg {
     width: 95%;
     height: 50%;
     max-width: 870px;
-    grid-auto-flow: column;
+    grid-auto-flow: dense;
     box-shadow: 3px 4px 15px rgb(0 0 0 / 0.3);
     border-radius: 1rem;
     padding: 1em;
@@ -151,66 +155,9 @@ svg {
 
       &-image {
         height: 100%;
+        content: url("../images/illustration-sign-up-desktop.svg");
       }
     }
   }
 }
 
-// For success page
-.success__body {
-  background-color: $charcoal-grey;
-  @extend .index__body;
-}
-
-.success__box {
-  width: 65%;
-  max-width: 400px;
-  padding: 2.5em 2em;
-  border-radius: 1rem;
-  background-color: $white;
-  box-shadow: 3px 4px 15px rgb(0 0 0 / 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  color: $charcoal-grey;
-
-  &--image {
-    width: 15%;
-  }
-
-  &--message {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-
-    &-heading {
-      font-size: 2.5rem;
-      line-height: 1em;
-    }
-
-    &-text {
-      font-size: 1rem;
-    }
-
-    &-dismiss {
-      padding: 1em 0;
-      font-family: $ff-primary;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      border: none;
-      background-color: $dark-slate-grey;
-      color: $white;
-      font-weight: map-get($font-weights, bold);
-      cursor: pointer;
-      transition: background 300ms ease-in-out;
-  
-      &:hover {
-        background: linear-gradient(to right, $start, $stop);
-        box-shadow: 3px 4px 15px hsl(346, 71%, 78%),
-          4px 3px 15px hsl(6, 100%, 76%);
-      }
-    }
-  
-  }
-
- }

@@ -5,12 +5,16 @@
   box-sizing: border-box;
 }
 
-.index__body, .success__body {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
+}
+
+input[type] {
+  padding-inline: 1em !important;
 }
 
 svg {
@@ -65,7 +69,7 @@ svg {
   gap: 1em;
 }
 .newsletter__container--first-form-input > * {
-  padding: 1.5em 0;
+  padding: 1.5em unset;
   font-family: "Roboto", sans-serif;
   border-radius: 0.5rem;
 }
@@ -87,7 +91,7 @@ svg {
 }
 .newsletter__container--first-form-input [type=submit]:hover {
   background: linear-gradient(to right, hsl(346, 71%, 58%), hsl(6, 100%, 66%));
-  box-shadow: 3px 4px 15px hsl(346, 71%, 78%), 4px 3px 15px hsl(6, 100%, 76%);
+  box-shadow: 3px 4px 15px hsl(346, 71%, 88%), 4px 3px 15px hsl(6, 100%, 86%);
 }
 .newsletter__container--image-container {
   order: 0;
@@ -101,7 +105,7 @@ svg {
     width: 95%;
     height: 50%;
     max-width: 870px;
-    grid-auto-flow: column;
+    grid-auto-flow: dense;
     box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     padding: 1em;
@@ -125,53 +129,6 @@ svg {
   }
   .newsletter__container--image-container-image {
     height: 100%;
+    content: url("../images/illustration-sign-up-desktop.svg");
   }
-}
-
-.success__body {
-  background-color: hsl(235, 18%, 26%);
-}
-
-.success__box {
-  width: 65%;
-  max-width: 400px;
-  padding: 2.5em 2em;
-  border-radius: 1rem;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  color: hsl(235, 18%, 26%);
-}
-.success__box--image {
-  width: 15%;
-}
-.success__box--message {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-}
-.success__box--message-heading {
-  font-size: 2.5rem;
-  line-height: 1em;
-}
-.success__box--message-text {
-  font-size: 1rem;
-}
-.success__box--message-dismiss {
-  padding: 1em 0;
-  font-family: "Roboto", sans-serif;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  border: none;
-  background-color: hsl(234, 29%, 20%);
-  color: hsl(0, 0%, 100%);
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 300ms ease-in-out;
-}
-.success__box--message-dismiss:hover {
-  background: linear-gradient(to right, hsl(346, 71%, 58%), hsl(6, 100%, 66%));
-  box-shadow: 3px 4px 15px hsl(346, 71%, 78%), 4px 3px 15px hsl(6, 100%, 76%);
 }/*# sourceMappingURL=styles.css.map */
