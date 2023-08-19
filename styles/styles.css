@@ -69,7 +69,7 @@ svg {
   gap: 1em;
 }
 .newsletter__container--first-form-input > * {
-  padding: 1.5em unset;
+  padding: 1.5em 0;
   font-family: "Roboto", sans-serif;
   border-radius: 0.5rem;
 }
