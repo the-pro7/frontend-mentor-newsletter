@@ -64,6 +64,21 @@ svg {
   flex-direction: column;
   gap: 0.5em;
 }
+.newsletter__container--first-form-labels {
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter__container--first-form-labels label {
+  font-weight: 700;
+}
+.newsletter__container--first-form-labels .error-message {
+  color: hsl(4, 100%, 67%);
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.newsletter__container--first-form-labels .error-message.show {
+  opacity: 1;
+}
 .newsletter__container--first-form-input {
   display: grid;
   gap: 1em;
@@ -92,6 +107,17 @@ svg {
 .newsletter__container--first-form-input [type=submit]:hover {
   background: linear-gradient(to right, hsl(346, 71%, 58%), hsl(6, 100%, 66%));
   box-shadow: 3px 4px 15px hsl(346, 71%, 88%), 4px 3px 15px hsl(6, 100%, 86%);
+}
+.newsletter__container--first-form-input [type=submit]:is(:focus, :active) {
+  outline-color: transparent;
+}
+.newsletter__container--first-form-input input.valid {
+  border-color: #51cf66;
+}
+.newsletter__container--first-form-input input.invalid {
+  border-color: hsl(4, 100%, 67%);
+  background-color: #fff1f0;
+  color: hsl(4, 100%, 67%);
 }
 .newsletter__container--image-container {
   order: 0;

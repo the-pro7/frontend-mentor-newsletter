@@ -1,35 +1,44 @@
 body {
-  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 680px) {
+  body {
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 }
 
 .success__box {
-  width: 65%;
-  max-width: 400px;
-  padding: 2.5em 2em;
-  border-radius: 1rem;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  background-color: hsl(0, 0%, 100%);
   color: hsl(235, 18%, 26%);
+  padding: 0 1em;
 }
 .success__box--image {
+  margin-top: 10em;
   width: 15%;
 }
 .success__box--message {
+  margin-top: 2.5em;
+  height: 55dvh;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  position: relative;
 }
 .success__box--message-heading {
-  font-size: 2.5rem;
-  line-height: 1em;
+  margin: 0;
+  font-size: 3rem;
 }
 .success__box--message-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  width: 80%;
 }
 .success__box--message-dismiss {
+  width: 100%;
   padding: 1em 0;
   font-family: "Roboto", sans-serif;
   border-radius: 0.5rem;
@@ -40,8 +49,42 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: background 300ms ease-in-out;
+  position: absolute;
+  bottom: 0;
 }
 .success__box--message-dismiss:hover {
   background: linear-gradient(to right, hsl(346, 71%, 58%), hsl(6, 100%, 66%));
-  box-shadow: 3px 4px 15px hsl(346, 71%, 78%), 4px 3px 15px hsl(6, 100%, 76%);
+  box-shadow: 3px 4px 15px hsl(346, 71%, 88%), 4px 3px 15px hsl(6, 100%, 86%);
+}
+@media screen and (min-width: 680px) {
+  .success__box {
+    width: 60%;
+    max-width: 350px;
+    padding: 2.5em 3em;
+    border-radius: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.3);
+    color: hsl(235, 18%, 26%);
+  }
+  .success__box--image {
+    margin-top: revert;
+    width: 15%;
+  }
+  .success__box--message {
+    margin-top: 2em;
+    height: revert;
+  }
+  .success__box--message-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .success__box--message-text {
+    margin-bottom: 2.5em;
+    font-size: 1rem;
+  }
+  .success__box--message-dismiss {
+    margin-bottom: 1em;
+    position: revert;
+  }
 }/*# sourceMappingURL=success.css.map */

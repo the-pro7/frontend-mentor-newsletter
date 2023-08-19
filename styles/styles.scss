@@ -76,6 +76,25 @@ svg {
       flex-direction: column;
       gap: 0.5em;
 
+      &-labels {
+        display: flex; 
+        justify-content: space-between;
+
+        label {
+          font-weight: weights(bold);
+        }
+
+        .error-message {
+          color: $invalid-color;
+          opacity: 0;
+          transition: opacity 300ms ease-in;
+        }
+
+        .error-message.show {
+          opacity: 1;
+        }
+      }
+
       &-input {
         display: grid;
         gap: 1em;
@@ -108,6 +127,21 @@ svg {
             box-shadow: 3px 4px 15px hsl(346, 71%, 88%),
               4px 3px 15px hsl(6, 100%, 86%);
           }
+
+          &:is(:focus, :active) {
+            outline-color: transparent;
+          }
+        }
+
+        // Valid or invalid
+        input.valid {
+          border-color: $valid-color;
+        }
+
+        input.invalid {
+          border-color: $invalid-color;
+          background-color: lighten($invalid-color, 30%);
+          color: $invalid-color;
         }
       }
     }
@@ -160,4 +194,7 @@ svg {
     }
   }
 }
+
+
+// Valid or invalid?
 

@@ -1,60 +1,103 @@
 @import "./config";
 
-
 // For success page
 body {
+  font-family: $ff-primary;
+
+  @include media($desktop-bp) {
     background-color: $charcoal-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
-  
-  .success__box {
-    width: 65%;
-    max-width: 400px;
-    padding: 2.5em 2em;
-    border-radius: 1rem;
-    background-color: $white;
-    box-shadow: 3px 4px 15px rgb(0 0 0 / 0.3);
+}
+
+.success__box {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  color: $charcoal-grey;
+  padding: 0 1em;
+
+  &--image {
+    margin-top: 10em;
+    width: 15%;
+  }
+
+  &--message {
+    margin-top: 2.5em;
+    height: 55dvh;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    position: relative;
+
+    &-heading {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    &-text {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+
+    &-dismiss {
+      width: 100%;
+      padding: 1em 0;
+      font-family: $ff-primary;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: $dark-slate-grey;
+      color: $white;
+      font-weight: map-get($font-weights, bold);
+      cursor: pointer;
+      transition: background 300ms ease-in-out;
+      position: absolute;
+      bottom: 0;
+      &:hover {
+        background: linear-gradient(to right, $start, $stop);
+        box-shadow: 3px 4px 15px hsl(346, 71%, 88%),
+          4px 3px 15px hsl(6, 100%, 86%);
+      }
+    }
+  }
+
+  // Desktop layout
+  @include media($desktop-bp) {
+    width: 60%;
+    max-width: 350px;
+    padding: 2.5em 3em;
+    border-radius: 1.5rem;
+    background-color: $white;
+    box-shadow: 3px 4px 15px rgb(0 0 0 / 0.3);
     color: $charcoal-grey;
-  
+
     &--image {
+      margin-top: revert;
       width: 15%;
     }
-  
+
     &--message {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
-  
+      margin-top: 2em;
+      height: revert;
+
       &-heading {
-        font-size: 2.5rem;
-        line-height: 1em;
+        font-size: 3rem;
+        font-weight: weights(bold);
+        margin: 0;
       }
-  
+
       &-text {
+        margin-bottom: 2.5em;
         font-size: 1rem;
       }
-  
+
       &-dismiss {
-        padding: 1em 0;
-        font-family: $ff-primary;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        border: none;
-        background-color: $dark-slate-grey;
-        color: $white;
-        font-weight: map-get($font-weights, bold);
-        cursor: pointer;
-        transition: background 300ms ease-in-out;
-    
-        &:hover {
-          background: linear-gradient(to right, $start, $stop);
-          box-shadow: 3px 4px 15px hsl(346, 71%, 78%),
-            4px 3px 15px hsl(6, 100%, 76%);
-        }
+        margin-bottom: 1em;
+        position: revert;
       }
-    
     }
-  
-   }
+  }
+}

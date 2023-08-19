@@ -5,6 +5,11 @@ $font-weights: (
   "bold": 700,
 );
 
+// Fonts function
+@function weights($weight) {
+  @return map-get($font-weights, $weight);
+}
+
 // Colors
 $primary-color: hsl(4, 100%, 67%);
 $start: hsl(346, 71%, 58%);
@@ -15,11 +20,15 @@ $charcoal-grey: hsl(235, 18%, 26%);
 $grey: hsl(231, 7%, 60%);
 $white: hsl(0, 0%, 100%);
 
+// Email valid?
+$valid-color: #51cf66;
+$invalid-color: $primary-color;
+
 $desktop-bp: 680px;
 
 // media query
 @mixin media($desktop-bp) {
-    @media screen and (min-width: $desktop-bp) {
-        @content;
-    }
+  @media screen and (min-width: $desktop-bp) {
+    @content;
+  }
 }
